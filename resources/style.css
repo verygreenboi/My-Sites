@@ -38,13 +38,13 @@ img.bg {
 }
 
 header{
-	margin: 0 0 0 373px;
+	margin: 0 0 0 323px;
 	/*overflow: hidden;*/
 }
 
 header .logo{
 	position: absolute;
-	top: 85px;
+	top: 72px;
 	left: 933px;
 	z-index: 20;
 }
@@ -88,43 +88,69 @@ nav li a.active{
 
 #main-content{
 	overflow: hidden;
-	margin: 0 20px 92px 20px;
+	margin: 0 20px 1px 20px;
 }
 
 aside{
-	margin: 0 0 0 53px;
+	margin: 0 0 0 55px;
+	padding: 0 10px;
 	float: left;
-	width: 300px;
-	min-height: 700px;
+	width: 226px;
+	background: #ffffff;
+	border-top: solid 2px #4DE597;
+	border-left: solid 2px #4DE597;
+	border-top-left-radius: 10px;
+	-moz-border-top-left-radius: 10px;
+	-webkit-border-top-left-radius: 10px;
+}
+
+aside h2{
+	font-size: medium;
+	padding: 0;
+	text-align: center;
+	border: solid 1px #98B5D5;
+	background: #98B5D5;
+}
+
+aside section{
+	float: right;
+	width: 226px;
+	padding: 10px 0 5px 10px;
+}
+
+aside .box{
+	min-height: 67px;
+	border: solid 1px #98B5D5;
+}
+
+aside form.srch{
+	padding: 10px 0 0 11px;
 }
 
 #inner{
 	margin: 0 100px 0 0;
 	padding: 20px 10px 54px 10px;
 	float: right;
-	width: 746px;
-	background: rgba(230, 231, 232, 0.7);
-	min-height: 692px;
+	width: 796px;
+	background: #ffffff;
 	border: solid 2px #4DE597;
 }
 
 article{
 	padding: 20px 0;
 	line-height: 1.6em;
-	font: normal normal 100% Arial, sans-serif;
+	font: normal normal 80% Arial, sans-serif;
 }
 
-article h1{
+#inner h1, h2{
 	padding: 10px 0 0;
 	text-indent: 20px;
 	font-size: 200%;
 	color: #C60;
-	border-top: solid 1px #98B5D5;
 }
 
 article .date-bubble{
 	text-indent: 20px;
-	border-bottom: solid 1px #98B5D5;
 }
 
 .entry-content{
@@ -139,13 +165,25 @@ footer{
 }
 
 #juice{
-	-moz-box-shadow: -3px 5px 5px #ccc;
+	/*-moz-box-shadow: -3px 5px 5px #ccc;
   	-webkit-box-shadow: -3px 5px 5px #ccc;
-  	box-shadow: -3px 5px 5px #ccc;
+  	box-shadow: -3px 5px 5px #ccc;*/
   	background: #ffffff;
-  	padding: 10px;  	
+  	padding: 10px;
+  	float: left;
+  	width: 480px  	
 }
 
 #juice p{
 	padding: 10px 0;
+}
+
+#mini-side{
+	padding-top: 30px;
+	float: right;
+	width: 296px;
+}
+
+#mini-side h2{
+	font-size: medium;
 }
