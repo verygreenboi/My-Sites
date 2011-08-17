@@ -1,5 +1,5 @@
 * { margin: 0; padding: 0; }
-html, body { height: 100%; font: 11px/1.4 Georgia, Serif; }
+html, body { height: 100%;}
 body { background: #98b5d5}
 header, section, footer, aside, nav, article, figure { display: block; } 
 
@@ -88,7 +88,7 @@ nav li a.active{
 
 #main-content{
 	overflow: hidden;
-	margin: 0 20px 60px 20px;
+	margin: 0 20px 92px 20px;
 }
 
 aside{
@@ -100,9 +100,9 @@ aside{
 
 #inner{
 	margin: 0 100px 0 0;
-	padding: 20px 20px 0 20px;
+	padding: 20px 10px 54px 10px;
 	float: right;
-	width: 726px;
+	width: 746px;
 	background: rgba(230, 231, 232, 0.7);
 	min-height: 692px;
 	border: solid 2px #4DE597;
@@ -110,6 +110,8 @@ aside{
 
 article{
 	padding: 20px 0;
+	line-height: 1.6em;
+	font: normal normal 100% Arial, sans-serif;
 }
 
 article h1{
@@ -130,8 +132,7 @@ article .date-bubble{
 }
 
 footer{
-	position: absolute;
-	bottom: 0;
+	position: relative;
 	min-height: 185px;
 	min-width: 100%;
 	background: url(images/footer-bg.png)
@@ -143,4 +144,8 @@ footer{
   	box-shadow: -3px 5px 5px #ccc;
   	background: #ffffff;
   	padding: 10px;  	
+}
+
+#juice p{
+	padding: 10px 0;
 }
