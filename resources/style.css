@@ -103,8 +103,7 @@ aside{
 	padding: 20px 20px 0 20px;
 	float: right;
 	width: 726px;
-	background: #e6e7e8;
-	opacity: 0.7;
+	background: rgba(230, 231, 232, 0.7);
 	min-height: 692px;
 	border: solid 2px #4DE597;
 }
@@ -136,4 +135,12 @@ footer{
 	min-height: 185px;
 	min-width: 100%;
 	background: url(images/footer-bg.png)
+}
+
+#juice{
+	-moz-box-shadow: -3px 5px 5px #ccc;
+  	-webkit-box-shadow: -3px 5px 5px #ccc;
+  	box-shadow: -3px 5px 5px #ccc;
+  	background: #ffffff;
+  	padding: 10px;  	
 }
