@@ -1,0 +1,139 @@
+* { margin: 0; padding: 0; }
+html, body { height: 100%; font: 11px/1.4 Georgia, Serif; }
+body { background: #98b5d5}
+header, section, footer, aside, nav, article, figure { display: block; } 
+
+/* Background image */
+
+img.bg {
+			/* Set rules to fill background */
+			min-height: 100%;
+			min-width: 1280px;
+			
+			/* Set up proportionate scaling */
+			width: 100%;
+			height: 120%;
+			
+			/* Set up positioning */
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+		
+		@media screen and (max-width: 1024px){
+			img.bg {
+				left: 50%;
+				margin-left: -512px; }
+		}
+		
+/*	Page wrap */
+
+#page-wrap{	
+	position:relative;
+	overflow:hidden;
+}
+
+#container{
+	margin: 115px 0 0 0;
+}
+
+header{
+	margin: 0 0 0 373px;
+	/*overflow: hidden;*/
+}
+
+header .logo{
+	position: absolute;
+	top: 85px;
+	left: 933px;
+	z-index: 20;
+}
+
+nav{
+	width: 560px;
+	background: #4de597;
+	border-top-left-radius: 10px;
+	-moz-border-top-left-radius: 10px;
+	-webkit-border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	-moz-border-top-right-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+}
+
+nav ul{
+	
+}
+
+nav li{
+	display: inline;
+	width: 70px;
+	list-style: none;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	border-left: solid #98B5D5 1px;
+}
+
+nav li a{
+	margin: 0 14px;
+	font-size: 13px;
+	letter-spacing 1px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+nav li a.active{
+	/*background: url(images/home.png) top left no-repeat;*/
+}
+
+#main-content{
+	overflow: hidden;
+	margin: 0 20px 60px 20px;
+}
+
+aside{
+	margin: 0 0 0 53px;
+	float: left;
+	width: 300px;
+	min-height: 700px;
+}
+
+#inner{
+	margin: 0 100px 0 0;
+	padding: 20px 20px 0 20px;
+	float: right;
+	width: 726px;
+	background: #e6e7e8;
+	opacity: 0.7;
+	min-height: 692px;
+	border: solid 2px #4DE597;
+}
+
+article{
+	padding: 20px 0;
+}
+
+article h1{
+	padding: 10px 0 0;
+	text-indent: 20px;
+	font-size: 200%;
+	color: #C60;
+	border-top: solid 1px #98B5D5;
+}
+
+article .date-bubble{
+	text-indent: 20px;
+	border-bottom: solid 1px #98B5D5;
+}
+
+.entry-content{
+	padding: 10px 20px 20px 20px;
+}
+
+footer{
+	position: absolute;
+	bottom: 0;
+	min-height: 185px;
+	min-width: 100%;
+	background: url(images/footer-bg.png)
+}
