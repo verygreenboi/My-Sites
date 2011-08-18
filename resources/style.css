@@ -1,31 +1,11 @@
 * { margin: 0; padding: 0; }
 html, body { height: 100%;}
-body { background: #98b5d5}
+body { background: url(images/bg.jpg) fixed no-repeat #98b5d5; font: 14px/1.4 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;}
 header, section, footer, aside, nav, article, figure { display: block; } 
 
 /* Background image */
 
-img.bg {
-			/* Set rules to fill background */
-			min-height: 100%;
-			min-width: 1280px;
-			
-			/* Set up proportionate scaling */
-			width: 100%;
-			height: 120%;
-			
-			/* Set up positioning */
-			position: fixed;
-			top: 0;
-			left: 0;
-		}
-		
-		@media screen and (max-width: 1024px){
-			img.bg {
-				left: 50%;
-				margin-left: -512px; }
-		}
-		
+
 /*	Page wrap */
 
 #page-wrap{	
@@ -45,7 +25,7 @@ header{
 header .logo{
 	position: absolute;
 	top: 72px;
-	left: 933px;
+	left: 883px;
 	z-index: 20;
 }
 
@@ -61,21 +41,21 @@ nav{
 }
 
 nav ul{
-	
+	overflow: hidden;
 }
 
 nav li{
-	display: inline;
+	float:left;
 	width: 70px;
 	list-style: none;
-	height: 40px;
+	height: 35px;
+	margin-left: 4px;
 	text-align: center;
-	line-height: 40px;
-	border-left: solid #98B5D5 1px;
+	line-height: 35px;
 }
 
 nav li a{
-	margin: 0 14px;
+	margin: 0 10px;
 	font-size: 13px;
 	letter-spacing 1px;
 	text-transform: uppercase;
@@ -130,10 +110,14 @@ aside form.srch{
 #inner{
 	margin: 0 100px 0 0;
 	padding: 20px 10px 54px 10px;
-	float: right;
+	float: left;
 	width: 796px;
 	background: #ffffff;
-	border: solid 2px #4DE597;
+	border-left: solid 2px #4DE597;
+	border-right: solid 2px #4DE597;
+	border-top: solid 2px #4DE597;
+	color: #666;
+	font-size: 15px;
 }
 
 article{
@@ -147,21 +131,6 @@ article{
 	text-indent: 20px;
 	font-size: 200%;
 	color: #C60;
-}
-
-article .date-bubble{
-	text-indent: 20px;
-}
-
-.entry-content{
-	padding: 10px 20px 20px 20px;
-}
-
-footer{
-	position: relative;
-	min-height: 185px;
-	min-width: 100%;
-	background: url(images/footer-bg.png)
 }
 
 #juice{
@@ -186,4 +155,64 @@ footer{
 
 #mini-side h2{
 	font-size: medium;
+}
+
+
+article .date-bubble{
+	text-indent: 20px;
+}
+
+.entry-content{
+	padding: 10px 20px 20px 20px;
+}
+
+footer{
+	background: #000;
+	color: white;
+	padding: 30px 0;
+}
+
+footer .container{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+}
+
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+
+.clearfix:before,
+.clearfix:after {
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+    The following zoom:1 rule is specifically for IE6 + IE7.
+    Move to separate stylesheet if invalid CSS is a problem.
+*/
+
+.clearfix {
+    zoom: 1;
 }
