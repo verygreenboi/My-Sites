@@ -87,7 +87,7 @@
 						</ul>
 					</nav>
 				
-					<img src="resources/images/logo.png" alt="" class="logo" />
+					<img src="<?php bloginfo( 'template_url' ); ?>/images/logo.png" alt="" class="logo" />
 				
 				</header>
 				

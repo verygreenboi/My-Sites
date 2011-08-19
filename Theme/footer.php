@@ -11,23 +11,49 @@
  */
 ?>
 
-<?php
-	/* A sidebar in the footer? Yep. You can can customize
-	 * your footer with four columns of widgets.
-	 */
-	get_sidebar( 'footer' );
-?>
+</div>
 
-			<a href="<?php echo home_url( '/' ) ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-			<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform" rel="generator">Proudly powered by WordPress </a>
+<footer>
+					<div class="container clearfix">
+						<div class="grid">
+							<ul>
+								<strong>Recent Projects</strong>
+								<li><a href="#">Transformer</a></li>
+							</ul>
+						</div>
+						
+						<div class="grid">
+							<strong>Blog</strong>
+							<li><a href="#">Recent Articles</a></li>
+						</div>
+						
+						<div class="grid">
+							<strong>Contact</strong>
+							<li>08033403490</li>
+						</div>
+						
+					</div>
+					
+					<div class="container clearfix">
+						<div class="senator">
+							<strong>Hon. Sultan Adegbayibi Adeniji Adele II</strong>
+							&copy; Hon Sultan. All rights reserved.
+						</div>
+					</div>
+					
+				</footer>
+			</div>
+		</div>
+		
+		<?php
+		/* Always have wp_footer() just before the closing </body>
+		 * tag of your theme, or you will break many plugins, which
+		 * generally use this hook to reference JavaScript files.
+		 */
+		
+		wp_footer();
+		?>
 
-<?php
-	/* Always have wp_footer() just before the closing </body>
-	 * tag of your theme, or you will break many plugins, which
-	 * generally use this hook to reference JavaScript files.
-	 */
-
-	wp_footer();
-?>
-</body>
+	</body>
+	
 </html>
