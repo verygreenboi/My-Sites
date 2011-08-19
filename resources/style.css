@@ -72,6 +72,7 @@ nav li a.active{
 }
 
 aside{
+	font-family: 'Andika', sans-serif;
 	margin: 0 0 0 55px;
 	padding: 0 10px;
 	float: left;
@@ -90,6 +91,15 @@ aside h2{
 	text-align: center;
 	border: solid 1px #98B5D5;
 	background: #98B5D5;
+}
+
+aside a{
+	text-decoration: none;
+	color: #C60;
+}
+
+aside p{
+	margin-left: 10px;
 }
 
 aside section{
@@ -116,6 +126,9 @@ aside form.srch{
 	border-left: solid 2px #4DE597;
 	border-right: solid 2px #4DE597;
 	border-top: solid 2px #4DE597;
+	border-top-right-radius: 10px;
+	-moz-border-top-right-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
 	color: #666;
 	font-size: 15px;
 }
@@ -127,6 +140,7 @@ article{
 }
 
 #inner h1, h2{
+	font-family: 'Questrial', sans-serif;
 	padding: 10px 0 0;
 	text-indent: 20px;
 	font-size: 200%;
@@ -144,6 +158,7 @@ article{
 }
 
 #juice p{
+	font-family: 'Andika', sans-serif;
 	padding: 10px 0;
 }
 
@@ -175,7 +190,27 @@ footer{
 footer .container{
 	margin-left: auto;
 	margin-right: auto;
-	width: 960px;
+	width: 640px;
+}
+
+footer .grid{
+	float:left;
+	width: 140px;
+	margin: 0 10px 30px 10px;
+}
+
+footer li{
+	list-style: none;
+}
+
+footer .senator{
+	margin: 0 10px 0 10px;
+}
+
+footer .senator strong{
+	font-family: 'Questrial', sans-serif;
+	font-size: 24px;
+	display: block;
 }
 
 /* `Clear Floated Elements
@@ -215,4 +250,22 @@ footer .container{
 
 .clearfix {
     zoom: 1;
+}
+
+/* Media Query*/
+
+@media (max-width: 1024px){
+	Header .logo{
+		top: 59px;
+		left: 84px;
+	}
+	#inner{
+		width: 537px;
+		border-top-right-radius: 0;
+		-moz-border-top-right-radius: 0;
+		-webkit-border-top-right-radius: 0;
+	}
+	#mini-side{
+		display: none;
+	}
 }
