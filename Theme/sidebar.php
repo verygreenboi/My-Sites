@@ -8,8 +8,6 @@
  */
 ?>
 
-			<ul class="xoxo">
-
 <?php
 	/* When we call the dynamic_sidebar() function, it'll spit out
 	 * the widgets for that widget area. If it instead returns false,
@@ -17,6 +15,45 @@
 	 * some default sidebar stuff just in case.
 	 */
 	if ( ! dynamic_sidebar( 'primary-widget-area' ) ) : ?>
+
+	<aside>
+		<section class="search">
+			<div class="box">
+				<h2>Search</h2>
+				<?php get_search_form(); ?>
+			</div>
+		</section>
+		
+		<section class="widget">
+			<div class="box">
+				<h2>Subscribe</h2>
+				
+				<p><a href="<?php bloginfo('rss2_url'); ?>">Rss Feed</a></p>
+				<p><a href="#">Email Subscription</a></p>
+			</div>
+		</section>
+		
+		<section class="widget">
+			<div class="box">
+				<h2>Recent Blog entries</h2>
+			</div>
+		</section>
+		
+		<section class="widget">
+			<div class="box">
+				<h2>Twitter Feeds</h2>
+			</div>
+		</section>
+		
+		<section class="party-logo widget">
+			
+		</section>
+		
+	</aside>
+
+			<ul class="xoxo">
+
+
 	
 			<li>
 				<?php get_search_form(); ?>
