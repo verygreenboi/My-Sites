@@ -497,3 +497,10 @@ function twentyten_posted_in() {
 	);
 }
 endif;
+
+//TODO: Change to google during production.
+if(!is_admin()){
+	wp_deregister_script('jquery');
+	wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"), false, '1.6.2');
+	wp_enqueue_script('jquery');
+}

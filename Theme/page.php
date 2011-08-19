@@ -14,21 +14,49 @@
 
 get_header(); ?>
 
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+<?php get_sidebar(); ?>
 
-					<?php if ( is_front_page() ) { ?>
-						<h2><?php the_title(); ?></h2>
-					<?php } else { ?>	
-						<h1><?php the_title(); ?></h1>
-					<?php } ?>				
+<div id="inner">
+	<div id="slider">
+		
+	</div>
+	
+	<?php
+	/* 
+	 * Start of Loop
+	 */?>
+	
+	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+	
+	<div id="juice">
+	<article>
+		<h2><?php the_title(); ?></h2>
+		<p class="date-bubble">
+			<span>By: <strong><?php the_author()?> </strong></span>
+			|
+			<span><?php echo get_the_date(); ?></span>
+		</p>
+		<div class="entry-content">
+			
+			<?php the_content(); ?>
+			<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>
+			<?php edit_post_link( __( 'Edit', 'twentyten' ), '', '' ); ?>
 
-						<?php the_content(); ?>
-						<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>
-						<?php edit_post_link( __( 'Edit', 'twentyten' ), '', '' ); ?>
+			<?php //comments_template( '', true ); ?>
+			
+		</div>
+	</article>
+	
+	</div>
+	
+	<div id="mini-side">
+		<h2>Recent Projects</h2>
+	</div>
+	
+</div>
 
-				<?php comments_template( '', true ); ?>
+</div>
 
 <?php endwhile; ?>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

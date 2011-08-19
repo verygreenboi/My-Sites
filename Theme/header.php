@@ -23,6 +23,11 @@
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+<link href='http://fonts.googleapis.com/css?family=Questrial|Andika' rel='stylesheet' type='text/css'>
+		
+		<!--[if lt IE 9]>
+		    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]--> 
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php
 	/* We add some JavaScript to pages with the comment form
@@ -38,18 +43,42 @@
 	 */
 	wp_head();
 ?>
+
+<script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/jquery.tweets.0.1.js"></script>
+
 </head>
 
 <body <?php body_class(); ?>>
 
-	<h1>
-		<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-	</h1>
-	<p><?php bloginfo( 'description' ); ?></p>
-
-	<div id="access" role="navigation">
-	  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
-		<a href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentyten' ); ?>"><?php _e( 'Skip to content', 'twentyten' ); ?></a>
-		<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
-		<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
-	</div><!-- #access -->
+	<div id="page-wrap">
+			<div id="container">
+				<header>
+					<nav>
+						<ul>
+							<li>
+								<a href="#" class="active">Home</a>
+							</li>
+							<li>
+								<a href="#">Focus</a>
+							</li>
+							<li>
+								<a href="#">Forum</a>
+							</li>
+							<li>
+								<a href="#">Gallery</a>
+							</li>
+							<li>
+								<a href="#">About</a>
+							</li>
+							<li>
+								<a href="#">Contact</a>
+							</li>
+						</ul>
+					</nav>
+				
+					<img src="resources/images/logo.png" alt="" class="logo" />
+				
+				</header>
+				
+				<div id="main-content" class="clearfix">
+					
